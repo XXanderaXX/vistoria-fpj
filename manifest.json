@@ -1,0 +1,26 @@
+{
+  "name": "Vistoria FPJ",
+  "short_name": "Vistoria FPJ",
+  "description": "Relatório técnico de vistoria e manejo da arborização da Fundação Parques e Jardins.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#e7eee8",
+  "theme_color": "#1b4332",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

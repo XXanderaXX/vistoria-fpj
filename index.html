@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#1b4332">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Vistoria FPJ">
+  <title>Vistoria FPJ</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sticky-head">
+    <header class="topbar">
+      <div>
+        <p class="kicker">Fundação Parques e Jardins</p>
+        <h1>Vistoria FPJ</h1>
+      </div>
+      <div class="top-meta">
+        <p id="spec-count">1 espécime</p>
+        <p id="net-pill">Dados neste aparelho</p>
+      </div>
+    </header>
+    <div id="switcher" class="switcher"></div>
+  </div>
+  <main id="app"></main>
+  <nav class="dock" aria-label="Ações da vistoria">
+    <button type="button" class="btn-save" data-action="save">Salvar Espécime</button>
+    <button type="button" class="btn-new" data-action="newer">Novo Registro</button>
+    <button type="button" class="btn-danger" data-action="delete">Apagar Registro Atual</button>
+    <button type="button" class="btn-danger" data-action="reset">Limpar Toda a Vistoria</button>
+  </nav>
+  <div id="confirm-modal" class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="confirm-text">
+      <p id="confirm-text">Tem certeza de realizar essa ação? Os dados não salvos serão perdidos.</p>
+      <button type="button" id="confirm-yes" class="btn-danger">Sim, confirmar</button>
+      <button type="button" id="confirm-no" class="btn-new">Cancelar</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>Ative o JavaScript para preencher a vistoria e gerar a planilha.</noscript>
+  <script src="vendor/exceljs.min.js"></script>
+  <script src="excel-export.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
